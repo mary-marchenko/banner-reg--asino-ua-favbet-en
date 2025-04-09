@@ -1,0 +1,131 @@
+$white: #FFF
+$magenta: #FF267E
+$blue: #005
+
+$font-suisseIntl-bold: SuisseIntl-Bold, sans-serif //700
+$font-suisseIntl-medium: SuisseIntl-Medium, sans-serif //500
+
+.banner
+  &__details
+    &-date
+      &.noios-padding
+        padding-top: 4px
+        @media screen and (max-width: 1280px)
+          padding-top: 3px
+    &-time
+      &.noios-padding
+        padding-top: 4px
+        @media screen and (max-width: 1280px)
+          padding-top: 3px
+
+body
+  overscroll-behavior: none
+  img
+    max-width: 100%
+    height: auto
+.wrapper
+  width: 100%
+  -webkit-tap-highlight-color: transparent
+  overscroll-behavior: none
+  height: 100%
+  display: flex
+.banner
+  position: relative
+  width: 50%
+  background: url("../img/bg.jpg") no-repeat 0% 0%/cover
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  height: calc(var(--vh, 1vh) * 100)
+  overflow: hidden
+  &:after
+    z-index: 3
+    content: ""
+    background: url("../img/glow.png") no-repeat 0% 0%/cover
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 308px
+  &__top
+    margin-top: 60px
+    width: 82vh
+    height: 61vh
+  &__text
+    position: absolute
+    //bottom: 278px
+    bottom: 26%
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 1
+    display: flex
+    align-items: center
+    flex-direction: column
+    &-item
+      color: $blue
+      font-family: $font-suisseIntl-bold
+      text-transform: uppercase
+      display: flex
+      justify-content: center
+      z-index: 2
+      &.bonus
+        max-height: 109px
+        width: 460px
+        font-size: 86px
+        background-color: $white
+        position: relative
+        box-shadow: 0px 6px 8px rgba(28, 30, 119, 0.53)
+        transform: rotate(1deg)
+        padding-top: 3px
+        &.noios-padding
+          padding-top: 17px
+      &.money
+        width: 600px
+        max-height: 129px
+        min-height: 129px
+        color: $white
+        background-color: $magenta
+        font-size: 80px
+        line-height: 100px
+        display: flex
+        z-index: 1
+        margin-top: -5px
+        padding-top: 15px
+        transform: rotate(-5deg)
+        &.noios-padding
+          padding-top: 23px
+        span
+          font-family: $font-suisseIntl-bold
+          color: $white
+          font-size: 40px
+          padding-right: 14px
+          padding-top: 13px
+      &.fs
+        transform: rotate(-8deg)
+        width: 368px
+        max-height: 89px
+        min-height: 89px
+        background-color: $white
+        font-size: 68px
+        margin-top: -5px
+        box-shadow: 0px -5px 10px rgba(28, 30, 119, 0.3)
+        padding-top: 2px
+        &.noios-padding
+          padding-top: 11px
+  &__bottom
+    position: relative
+    width: 60vh
+    height: 33vh
+    z-index: 2
+  &__info
+    z-index: 4
+    position: absolute
+    //bottom: 80px
+    bottom: 7.5%
+    left: 50%
+    transform: translateX(-50%)
+    width: 80%
+    color: $white
+    font-size: 14px
+    line-height: 17px
+    font-family: $font-suisseIntl-medium
